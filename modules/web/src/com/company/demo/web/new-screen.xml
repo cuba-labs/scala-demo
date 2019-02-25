@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd" caption="msg://caption"
+        messagesPack="com.company.demo.web">
+    <data>
+        <collection id="usersDc" class="com.haulmont.cuba.security.entity.User" view="_local">
+            <loader>
+                <query><![CDATA[select e from sec$User e ]]></query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <table id="usersTable" dataContainer="usersDc" height="100%" width="100%">
+            <columns>
+                <column id="login"/>
+                <column id="active"/>
+            </columns>
+        </table>
+    </layout>
+</window>
